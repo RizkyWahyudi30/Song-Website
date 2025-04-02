@@ -104,7 +104,7 @@ body {
 
 .progress-area .progress-bar {
   height: inherit;
-  width: 50%;
+  width: 0%;
   position: relative;
   border-radius: inherit;
   background: linear-gradient(90deg, var(--pink) 0%, var(--violet) 100%);
@@ -268,4 +268,9 @@ ul li .row p {
 
 ul li .audio-duration {
   font-size: 16px;
+}
+
+ul .playing {
+  color: var(--violet);
+  pointer-events: none;
 }

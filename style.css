@@ -34,6 +34,36 @@ body {
   align-items: center;
 }
 
+@media (max-width: 480px) {
+  body {
+    padding: 0 15px;
+  }
+
+  .wrapper {
+    width: 90%;
+    padding: 15px;
+    margin: 0 auto;
+    border-radius: 10px;
+  }
+
+  /* Metode alternatif untuk persegi */
+  .img-area {
+    width: 100%;
+    height: 0;
+    padding-top: 100%; /* Membuat tinggi sama dengan lebar (persegi) */
+    position: relative;
+  }
+
+  .img-area img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
 /* Container untuk seluruh konten */
 .container {
   width: 100%;

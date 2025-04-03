@@ -10,7 +10,11 @@ const wrapper = document.querySelector(".wrapper"),
   progressBar = wrapper.querySelector(".progress-bar"),
   musicList = wrapper.querySelector(".music-list"),
   showMoreBtn = wrapper.querySelector("#more-music"),
-  hideMusicBtn = musicList.querySelector("#close");
+  hideMusicBtn = musicList.querySelector("#close"),
+  lyricsBtn = wrapper.querySelector("#lyrics-btn"),
+  lyricsToggle = wrapper.querySelector(".lyrics-toggle span"),
+  lyricsArea = wrapper.querySelector(".lyrics-area"),
+  lyricsContent = wrapper.querySelector(".lyrics-content");
 
 let musicIndex = 1;
 
@@ -32,6 +36,10 @@ function playMusic() {
   wrapper.classList.add("paused");
   playPauseBtn.querySelector("i").innerText = "pause";
   mainAudio.play();
+
+  // Tambahkan baris berikut untuk menampilkan lirik secara otomatis
+  lyricsArea.classList.add("show");
+  lyricsToggle.innerText = "Hide Lyrics";
 }
 
 // pause music
@@ -250,3 +258,41 @@ function clicked(element) {
   playMusic();
   playingNow();
 }
+
+// Fungsi untuk memuat lirik lagu
+function loadLyrics(songSrc) {
+  // Cari lirik lagu yang sesuai dengan file audio yang sedang diputar
+  const currentSong = lyricsData.find((song) => song.src === songSrc);
+
+  if (currentSong) {
+    lyricsContent.innerText = currentSong.lyrics;
+  } else {
+    lyricsContent.innerText = "Lirik tidak tersedia untuk lagu ini.";
+  }
+}
+
+// Update fungsi loadMusic untuk memuat lirik
+const originalLoadMusic = loadMusic;
+loadMusic = function (indexNumb) {
+  originalLoadMusic(indexNumb);
+  loadLyrics(allMusic[indexNumb - 1].src);
+
+  // Load lirik
+  loadLyrics(allMusic[indexNumb - 1].src);
+
+  // Pastikan lirik terlihat jika lagu sedang diputar
+  if (wrapper.classList.contains("paused")) {
+    lyricsArea.classList.add("show");
+    lyricsToggle.innerText = "Hide Lyrics";
+  }
+};
+
+// Toggle untuk menampilkan/menyembunyikan lirik
+lyricsBtn.addEventListener("click", () => {
+  lyricsArea.classList.toggle("show");
+  if (lyricsArea.classList.contains("show")) {
+    lyricsToggle.innerText = "Hide Lyrics";
+  } else {
+    lyricsToggle.innerText = "Show Lyrics";
+  }
+});

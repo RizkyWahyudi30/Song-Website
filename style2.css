@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  background: #15182e;
+}
+
+.background-container {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.shape {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  opacity: 0.8;
+  animation: floatAnimation linear infinite;
+}
+
+/* Bentuk lingkaran */
+.circle {
+  border-radius: 50%;
+}
+
+/* Bentuk persegi */
+.square {
+  border-radius: 10%;
+}
+
+/* Bentuk segitiga */
+.triangle {
+  width: 0;
+  height: 0;
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-bottom: 35px solid;
+}
+
+/* Bentuk heksagon */
+.hexagon {
+  width: 34px;
+  height: 19.64px;
+  background-color: inherit;
+  position: relative;
+}
+
+.hexagon::before,
+.hexagon::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  border-left: 17px solid transparent;
+  border-right: 17px solid transparent;
+}
+
+.hexagon::before {
+  top: -17px;
+  border-bottom: 17px solid inherit;
+}
+
+.hexagon::after {
+  bottom: -17px;
+  border-top: 17px solid inherit;
+}
+
+@keyframes floatAnimation {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.5);
+    opacity: 0;
+  }
+}

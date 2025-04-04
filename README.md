@@ -1,13 +1,10 @@
 # Song Website for Someone
 
-Hi guys, I was inspired by the GitHub of `@anuGrahBodi` for this SNBP Clonning website, so here I want to recreate or copy the website by tidying up the main page to make it neater and more beautiful.
-
-> [!WARNING]
-> once again, I can't just copy other people's projects, I also make changes
+Hi everyone, this is a small project of mine, I made a `song website for someone`, there are not too many features on the website.
 
 The Tech Stack that I use here is 3, namely: </br>
 
-![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=plastic&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E) ![Bootstrap](https://img.shields.io/badge/bootstrap-%238511FA.svg?style=plastic&logo=bootstrap&logoColor=white)
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=plastic&logo=css3&logoColor=white) ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=plastic&logo=html5&logoColor=white) ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=plastic&logo=javascript&logoColor=%23F7DF1E)
 
 and also using `cdnjs fontawesome and qrcode`:
 
@@ -18,19 +15,9 @@ and also using `cdnjs fontawesome and qrcode`:
 
 The following are the features displayed on the `SNBP Clonning website`:
 
-- 🎯 Select Pass/Fail mode with Pass=>Blue, Fail=>Red
-- 🎯 Select the year you want to display in the header
-- 🎯 Enter fake NISN number
-- 🎯 Enter registration number
-- 🎯 Enter real/fake name
-- 🎯 Select desired Campus/University
-- 🎯 Select study program, such as level and faculty you want to choose
-- 🎯 Fill in fake campus admission link
-- 🎯 Fill in date of birth
-- 🎯 Fill in school/fake name
-- 🎯 Select place of residence, district/city and district/city name
-- 🎯 Enter province name
+- 🎯 Songs can be played, paused, resumed, replayed, and can select the song you want to play
+- 🎯 Displays song lyrics
 
 > [!NOTE]
 >
-> This website will continue to grow
+> I made this website because he is my friend, not my partner, I also made this as practice for myself

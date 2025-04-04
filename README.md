@@ -1,4 +1,4 @@
-# SNBP Clonning
+# Song Website for Someone
 
 Hi guys, I was inspired by the GitHub of `@anuGrahBodi` for this SNBP Clonning website, so here I want to recreate or copy the website by tidying up the main page to make it neater and more beautiful.
 

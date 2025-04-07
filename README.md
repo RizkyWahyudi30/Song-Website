@@ -2,7 +2,7 @@
   <img src="images/forHeader-github.jpeg" alt="Logo" width="100%">
 </p>
 
-# Song Website for Someone
+# Song Website for Someone <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" width="30">
 
 Hi everyone, this is a small project of mine, I made a `song website for someone`, there are not too many features on the website.
 
